@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    font-size: 15px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header {
+    background-color: #FAF0E6;
+    font-size: 10px;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+
+  .navbar {
+    background-color: #FAF0E6;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+  }
+
+  .navbar-nav .nav-link {
+    color: #000;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    /* Adjust font size */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #ff4500 !important;
+    transition: color 0.3s;
+    text-transform: lowercase !important;
+
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 20px;
+    /* Adjust spacing between nav items */
+  }
+
+  /* .c-itmes {
+  height: 480px;
+  filter: brightness(0.6);
+  } */
+  .c-img {
+    height: 480px;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
+  .contenlit {
+    max-width: 1140px;
+    margin: auto;
+    padding: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .imgcaffila {
+    object-fit: cover;
+    border-radius: 5px;
+    max-height: auto !important;
+    width: 100%;
+  }
+
+  .text-muted {
+    color: #6c757d;
+  }
+
+  .heading h2 {
+    color: #000;
+    font-size: 28px;
+    font-family: 'times New Roman';
+  }
+
+  .imgmenu {
+    max-width: 33.33333%;
+    padding: 15px;
+  }
+
+  .img-fluid {
+    width: 500px;
+    height: auto;
+  }
+
+  .itemsfounding {
+    padding: 60px 0;
+  }
+
+  .img-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .custom-carousel-control {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .custom-carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .carousel-control-prev {
+    left: -60px;
+  }
+
+  .carousel-control-next {
+    right: -60px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 100%, 100%;
+    background-color: rgba(212, 228, 37, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .contact-info-box {
+
+    padding: 30px 0;
+  }
+
+  .icon-box {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-color: #FFCC99;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    margin-bottom: 10px;
+  }
+
+  .icon-box i {
+    font-size: 24px;
+    color: #DD0000;
+    display: block;
+  }
+
+  .contact-info-box h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #996633;
+    margin: 0 0 5px;
+  }
+
+  .contact-info-box p {
+    font-weight: 300;
+    color: #996633;
+    margin: 0;
+  }
+
+  .col-md-4 {
+    flex: 1;
+    padding: 0 15px;
+    max-width: 33.333333%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  /* footer */
+  .bg-f {
+    background-image: url(./img/hatcf2.jpg);
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .footer-area {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+
+  .footer-area h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #d0a772;
+    padding: 0 0 15px 0;
+    position: relative;
+  }
+
+  footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #d0a772;
+  }
+
+  .footerend {
+    margin-top: 20px;
+    position: relative;
+    background-color: #291717;
+    border-top: 1px dashed #d0a772;
+    padding: 10px 0;
+    z-index: 1;
+    padding-left: 15px;
+  }
+
+  .footerend p {
+    color: aliceblue;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+</style>
+
+<body>
+  <div class="id">
+    <div id="root">
+      <div class="main">
+        <div class="header align-items-center fixed-top ">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <div class="bssalofg">
+                <a class="navbar-logo" href="#">
+                  <img src="./img/Screenshot 2024-09-12 233503.png" alt="Logo" height="60px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div class=" align-items-center">
+                <div class="collapse navbar-collapse ">
+                  <ul class="navbar-nav ms-auto fs-4 text-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Thông Tin</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Liên Lạc</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="content">
+          <div id="herocaroul" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#herocaroul" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#herocaroul" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#herocaroul" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" height="480">
+                <img src="../img/pexels-igor-starkov-233202-1002740.jpg" class="d-block w-100 c-img " alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Welcome to CAFILA COFFE</h5>
+                  <p>Với thiết kế chủ đạo đặc trưng của cafila Coffee là tone màu xám trung tính</p>
+                  <p> Nội thất gỗ mang đặc trưng chuỗi quán cafe Laika nhưng mỗi quán cà phê của LAIKA vẫn có điểm khác
+                    biệt
+                    riêng.</p>
+                </div>
+              </div>
+              <div class="carousel-item  " height="480">
+                <img src="../img/pexels-photo-683039.jpeg" class="d-block w-100 c-img " alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Welcome to CAFILA COFFE</h5>
+                  <p>Nổi tiếng là một trong những chuỗi cafe đường tàu hot nhất với giới trẻ, ít ai biết, Laika cũng
+                    từng
+                    chật vật đi tìm chỗ đứng.
+                    Tuy nhiên, quán Cafe ít ai biết ngày nào đã trở thành điểm đến cực thu hút.</p>
+                </div>
+              </div>
+              <div class="carousel-item " height="480">
+                <img src="../img/top-quan-ca-phe-dep-o-binh-duong-ma-ban-nen-biet-2-1655212600.jpg"
+                  class="d-block w-100 c-img" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Welcome to CAFILA COFFE</h5>
+                  <p>Menu đồ uống trong quán vô cùng đa dạng từ trà cho tới các loại cà phê,
+                    nhiều lựa chọn, giá cả trung bình phù hợp với nhiều ví tiền.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#herocaroul" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#herocaroul" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="contenlit">
+            <div class=" row">
+              <div class="col-md-6 cafilaa-img">
+                <img src="../img/istockphoto-1467199060-612x612.jpg" alt="cafila" class="imgcaffila">
+              </div>
+              <div class="col-md-6">
+                <h2>Welcome to Cafila Coffe</h2>
+                <p class="text-muted">Những mẩu chuyện về Cafila Coffe...</p>
+                <p>Đồ uống và bánh của Cafila ngày càng hoàn thiện về chất lượng. Âm trà thơm, thanh nhẹ nhàng, có thêm
+                  cả
+                  lát
+                  cam, chanh dì kèm có thể thả vào ấm cho thêm hương vị, và chút ô mai mứt, bánh quy các loại nhâm nhi
+                  kèm.
+                  Vừa ấm nóng vừa ngọt ngào.</p>
+                <p>Bánh Saint Honore khá ngon, phần kem màu trắng khá smooth, bên trong nhân mứt trái cây chua ngọt, lớp
+                  đế
+                  giòn mềm thơm bơ sữa, còn mấy viên bánh su vỏ dài mềm, nhân bên xong béo ngậy nhưng ngọt rất nhẹ, ko
+                  ngấy
+                  quá.</p>
+                <p>Minh có thử một set trà bánh Paris Kisses gồm trà sen cúc ăn kèm cùng bánh Saint Honore. Đây là một
+                  combo
+                  xuất sắc cho mùa đông, trà thanh nhẹ thơm mùi sen cùng với miếng bánh su kem thơm ngậy béo phủ
+                  caramel.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="conten-menu">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="heading text-center">
+                    <h2>Album of CAFILA</h2>
+                    <p class="text-muted">Cafila Coffee là nhà cung cấp các món ngon đa dạng và ngon tại binh duong.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="gallerymenu">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4 col-lg-4 imgmenu">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 220319.png"
+                        alt="IMG1"> </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4 imgmenu ">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 220323.png"
+                        alt="IMG2"> </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4 imgmenu">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 220328.png"
+                        alt="IMG3"> </a>
+                  </div>
+                  <div class="col-sm-12 col-md-4 col-lg-4 imgmenu ">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 220333.png"
+                        alt="IMG4"> </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4 imgmenu ">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 222556.png"
+                        alt="IMG5"> </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-4 imgmenu">
+                    <a class="lightbot" href="#"><img class="img-fluid" src="../img/Screenshot 2024-09-13 220343.png"
+                        alt="IMG6"> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fouding">
+                <div class="row">
+                  <div class="col-lg-12 heading text-center">
+                    <h2>Founding Team</h2>
+                  </div>
+                </div>
+              </div>
+              <div class=" itemsfounding  row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                  <div class="card text-center border-0">
+                    <div id="founding" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner mt-4">
+                        <div class="carousel-item active text-center">
+                          <div class="img-box p-1 border rounded-circle m-auto" style="width: 150px; height: 150px;">
+                            <img class="d-block w-100 rounded-circle" src="../img/meo1.jpg" alt="Mèo Đen">
+                          </div>
+                          <h5 class="mt-4 mb-0">
+                            <strong class="text-warning text-uppercase">Mèo vàng</strong>
+                          </h5>
+                          <p class="m-0 pt-3">Thành công không phải là số tiền bạn kiếm được, mà là sự khác biệt bạn tạo
+                            ra
+                            cho cuộc sống của người khác.</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                          <div class="img-box p-1 border rounded-circle m-auto" style="width: 150px; height: 150px;">
+                            <img class="d-block w-100 rounded-circle" src="../img/meo2.jpg" alt="Mèo Trắng">
+                          </div>
+                          <h5 class="mt-4 mb-0">
+                            <strong class="text-warning text-uppercase">Mèo cam</strong>
+                          </h5>
+                          <p class="m-0 pt-3">Cuộc sống tươi đẹp khi chúng ta biết yêu thương và chia sẻ.</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                          <div class="img-box p-1 border rounded-circle m-auto" style="width: 150px; height: 150px;">
+                            <img class="d-block w-100 rounded-circle" src="../img/meo3.jpg" alt="Mèo Xám">
+                          </div>
+                          <h5 class="mt-4 mb-0">
+                            <strong class="text-warning text-Silver">Mèo Xám</strong>
+                          </h5>
+                          <p class="m-0 pt-3">Mỗi ngày là một cơ hội để bạn trở thành phiên bản tốt hơn của chính mình.
+                          </p>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev " type="button" data-bs-target="#founding"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next " type="button" data-bs-target="#founding"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-box align-items-center  ">
+                <div class="container">
+                  <div class="row d-flex justify-content-center">
+                    <div class="  col-md-4">
+                      <div class="icon-box d-flex justify-content-center align-items-center">
+                        <i class="fa fa-phone-volume "></i>
+                      </div>
+                      <div class="overflow-hidden ">
+                        <h4>Di Động</h4>
+                        <p>096 123 4567</p>
+                      </div>
+                    </div>
+                    <div class=" col-md-4">
+                      <div class="icon-box d-flex justify-content-center align-items-center">
+                        <i class="fa fa-envelope"></i>
+                      </div>
+                      <div class="overflow-hidden">
+                        <h4>Email</h4>
+                        <p>truongpii15@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class=" col-md-4">
+                      <div class="icon-box d-flex justify-content-center align-items-center">
+                        <i class="fa fa-map-marker-alt"></i>
+                      </div>
+                      <div class="overflow-hidden">
+                        <h4>Địa Chỉ</h4>
+                        <p>23 Vĩnh Tuy - Hai Bà Trưng - Hà Nội</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer-area bg-f">
+            <div class="container difa">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                  <h3 class="text-white ">Về Chúng Tôi</h3>
+                  <p class="text-white">Cafila luôn hướng tới đáp ứng tốt nhất mong muốn của khách hàng về một quán cà
+                    phê.
+                    Vì vậy, đội ngũ
+                    LAIKA luôn làm việc hết mình, có trách nhiệm và thực sự đặt "cái tâm" của mình vào từng ly trà, cốc
+                    cà
+                    phê hay thâm chí là một cái bánh với một thái độ phục vụ chuyên nghiệp.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center">
+                  <h3 class="text-white  ">Các cơ sở của LAIKA</h3>
+                  <p class="text-white ">Số 64, Đường Láng, Đống Đa</p>
+                  <p class="text-white">Số 52, Lĩnh Nam, Hoàng Mai</p>
+                  <p class="text-white">Số 229, Phố Huế, Hai Bà Trưng</p>
+                  <p class="text-white">Số 411, Hạ Long, Quảng Ninh</p>
+                  <p class="text-white">Số 112, Lê Hồng Phong, Vinh</p>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                  <h3 class="text-white  ">Thời gian mở cửa</h3>
+                  <p class="text-white">Thứ 2 - Thứ 7: 9h00 - 24h00</p>
+                  <p class="text-white">Chủ nhật: 7h00 - 24h00</p>
+                </div>
+                <div class="col-lg-3  col-md-6 mb-4 text-center ">
+                  <h3 class="fw-bold text-white ">Thông Tin Liên Hệ</h3>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="fa-brands fa-facebook me-2 text-primary "></i>
+                      <a href="#" class="text-white text-decoration-none ">facebook.com/laikacafe.vn</a>
+                    </li>
+                    <li>
+                      <i class="fa-brands fa-instagram me-2 text-danger "></i>
+                      <a href="#" class="text-white text-decoration-none">instagram.com/laikacafe.vn</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footerend ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 text-center fs-5 ">
+                    <div class="company-name text-white ">
+                      copyright. @2024 <a href="#"> Cafila Coffee </a>
+                      Design By :
+                      <a href="#"> Đội Ngũ Cafila Coffee </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </footer>
+        <!-- MAIN -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
